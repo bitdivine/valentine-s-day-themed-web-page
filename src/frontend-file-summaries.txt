@@ -1,0 +1,8 @@
+{
+  "frontend/src/App.tsx": "Main Valentine's Day application component featuring a bright red background, centered heartfelt message with quotes, floating hearts animation using red-background assets, interactive surprise button with white styling, and responsive footer with high-contrast white text for legibility on red background.",
+  "frontend/src/components/FloatingHearts.tsx": "Component that generates and animates 15 randomly positioned floating hearts across the screen using the red-background heart assets with varying sizes, delays, durations, and adjusted opacity for better visibility against bright red background.",
+  "frontend/src/components/SurpriseMessage.tsx": "Dialog component that displays a romantic surprise message with decorative hearts using red-background assets, inspirational quotes, and light rose/pink gradient styling that maintains proper contrast when triggered by the main button.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file as no backend queries are needed for this frontend-only Valentine's Day page.",
+  "frontend/src/index.css": "Global styles with Valentine's Day themed OKLCH color system featuring a bright red background with white and light pink accents for both light and dark modes, plus custom floating hearts animation keyframes with adjusted opacity for red background visibility.",
+  "frontend/tailwind.config.js": "Tailwind configuration unchanged from template, utilizing the Valentine's themed color tokens defined in index.css."
+}

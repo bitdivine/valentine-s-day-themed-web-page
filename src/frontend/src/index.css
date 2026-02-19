@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 1rem;
+        /* Light mode - Valentine's theme with bright red background */
+        --background: 0.55 0.25 15;
+        --foreground: 0.98 0.02 15;
+        --card: 0.60 0.22 15;
+        --card-foreground: 0.98 0.02 15;
+        --popover: 0.60 0.22 15;
+        --popover-foreground: 0.98 0.02 15;
+        --primary: 0.98 0.02 15;
+        --primary-foreground: 0.55 0.25 15;
+        --secondary: 0.65 0.20 15;
+        --secondary-foreground: 0.98 0.02 15;
+        --muted: 0.65 0.18 15;
+        --muted-foreground: 0.90 0.05 15;
+        --accent: 0.75 0.18 340;
+        --accent-foreground: 0.98 0.02 15;
+        --destructive: 0.45 0.28 15;
+        --destructive-foreground: 0.99 0.01 15;
+        --border: 0.70 0.20 15;
+        --input: 0.70 0.20 15;
+        --ring: 0.98 0.02 15;
+        --chart-1: 0.98 0.02 15;
+        --chart-2: 0.75 0.18 340;
+        --chart-3: 0.70 0.22 10;
+        --chart-4: 0.80 0.15 350;
+        --chart-5: 0.68 0.20 20;
+    }
+
+    .dark {
+        /* Dark mode - Valentine's theme with deep red background */
+        --background: 0.35 0.20 15;
+        --foreground: 0.95 0.02 15;
+        --card: 0.40 0.18 15;
+        --card-foreground: 0.95 0.02 15;
+        --popover: 0.38 0.18 15;
+        --popover-foreground: 0.95 0.02 15;
+        --primary: 0.90 0.05 15;
+        --primary-foreground: 0.30 0.18 15;
+        --secondary: 0.42 0.18 15;
+        --secondary-foreground: 0.95 0.02 15;
+        --muted: 0.42 0.15 15;
+        --muted-foreground: 0.85 0.04 15;
+        --accent: 0.70 0.16 340;
+        --accent-foreground: 0.95 0.02 15;
+        --destructive: 0.50 0.25 15;
+        --destructive-foreground: 0.95 0.01 15;
+        --border: 0.45 0.18 15;
+        --input: 0.45 0.18 15;
+        --ring: 0.90 0.05 15;
+        --chart-1: 0.90 0.05 15;
+        --chart-2: 0.70 0.16 340;
+        --chart-3: 0.65 0.20 10;
+        --chart-4: 0.75 0.14 350;
+        --chart-5: 0.68 0.18 20;
+    }
+
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+@layer utilities {
+    /* Floating hearts animation */
+    @keyframes float {
+        0% {
+            transform: translateY(100vh) rotate(0deg);
+            opacity: 0;
+        }
+        10% {
+            opacity: 0.4;
+        }
+        90% {
+            opacity: 0.4;
+        }
+        100% {
+            transform: translateY(-100px) rotate(360deg);
+            opacity: 0;
+        }
+    }
+
+    .animate-float {
+        animation: float linear infinite;
+    }
+
+    /* Pulse animation with custom timing */
+    @keyframes gentle-pulse {
+        0%, 100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+        50% {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+    }
+
+    .animate-gentle-pulse {
+        animation: gentle-pulse 3s ease-in-out infinite;
+    }
+}
